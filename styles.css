@@ -1,0 +1,236 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #2d9cdb;
+}
+
+a {
+    color: #2d9cdb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #2d9cdb;
+}
+
+header nav ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+header nav ul li a:hover {
+    color: #2d9cdb;
+}
+
+/* Main Section */
+main {
+    padding: 40px 10%;
+    background-color: #ffffff;
+}
+
+/* Noticias */
+#noticias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.noticia {
+    width: 48%;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.noticia:hover {
+    transform: translateY(-5px);
+}
+
+.noticia img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #2d9cdb;
+}
+
+.noticia h2 {
+    font-size: 1.5rem;
+    padding: 15px;
+    color: #333;
+}
+
+.noticia p {
+    font-size: 1rem;
+    padding: 0 15px 15px 15px;
+    color: #555;
+}
+
+.noticia a {
+    display: inline-block;
+    background-color: #2d9cdb;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.noticia a:hover {
+    background-color: #2290cc;
+}
+
+/* Aside (Comentarios) */
+aside {
+    margin-top: 40px;
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+aside h3 {
+    font-size: 1.5rem;
+    color: #2d9cdb;
+    margin-bottom: 20px;
+}
+
+#comentarios li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-left: 4px solid #2d9cdb;
+}
+
+#comentarios li strong {
+    color: #2d9cdb;
+}
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+footer p a {
+    margin: 0 5px;
+    color: #2d9cdb;
+}
+
+/* Formulario de contacto */
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+form label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #2d9cdb;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #2290cc;
+}
+
+/* Resaltar elementos */
+button, a {
+    transition: background-color 0.3s ease;
+}
+
+/* Página de comentarios */
+#comentario {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+textarea {
+    height: 120px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+button[type="submit"] {
+    background-color: #2d9cdb;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #2290cc;
+}

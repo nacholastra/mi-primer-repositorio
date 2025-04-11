@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Tecnología</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <meta name="description" content="Últimas noticias, análisis y reseñas sobre tecnología, gadgets e innovación.">
+    <meta name="keywords" content="tecnología, noticias, análisis, reseñas, gadgets">
+    <meta name="author" content="Blog de Tecnología">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Blog de Tecnología</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="analisis.html">Análisis</a></li>
+                <li><a href="resenias.html">Reseñas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="noticias">
+            <article class="noticia">
+                <img src="https://via.placeholder.com/150" alt="Apple iPhone 15">
+                <h2>Apple presenta su nuevo iPhone 15</h2>
+                <p>Apple ha lanzado su nueva línea de iPhones con mejoras en la cámara y un procesador más potente.</p>
+                <a href="#">Leer más</a>
+            </article>
+            <article class="noticia">
+                <img src="imagen2.jpg" alt="Google Android 14">
+                <h2>Google lanza Android 14</h2>
+                <p>La última versión de Android introduce nuevas funciones de privacidad y una mejor gestión de la batería.</p>
+                <a href="#">Leer más</a>
+            </article>
+            <article class="noticia">
+                <img src="imagen3.jpg" alt="Elon Musk IA">
+                <h2>Elon Musk anuncia avances en inteligencia artificial</h2>
+                <p>Neuralink y Tesla trabajan en modelos de IA más avanzados para sus productos.</p>
+                <a href="#">Leer más</a>
+            </article>
+            <article class="noticia">
+                <img src="imagen4.jpg" alt="Microsoft Surface Windows 11">
+                <h2>Microsoft presenta nuevas laptops con Windows 11</h2>
+                <p>Las nuevas Surface ofrecen un mejor rendimiento y mayor integración con la nube.</p>
+                <a href="#">Leer más</a>
+            </article>
+            <article class="noticia">
+                <img src="imagen5.jpg" alt="Meta Gafas AR">
+                <h2>Meta lanza gafas de realidad aumentada</h2>
+                <p>Las nuevas gafas de Meta buscan revolucionar la forma en que interactuamos con la tecnología.</p>
+                <a href="#">Leer más</a>
+            </article>
+        </section>
+    </main>
+    <aside>
+        <main>
+            <section id="noticias">
+                <!-- Noticias aquí como antes -->
+            </section>
+            
+            <aside>
+                <h3>Últimos comentarios</h3>
+                <ul id="comentarios">
+                    <!-- Comentarios se cargarán aquí -->
+                </ul>
+            </aside>
+    
+            <section id="formulario-comentarios">
+                <h3>Deja un comentario</h3>
+                <form id="comentarios-form">
+                    <textarea id="nuevo-comentario" placeholder="Escribe tu comentario..." rows="4" required></textarea>
+                    <button type="submit">Enviar Comentario</button>
+                </form>
+            </section>
+        </main>
+    </aside>
+    <footer>
+        <p>&copy; 2025 Blog de Tecnología. Todos los derechos reservados.</p>
+        <p><a href="politicas.html">Política de Privacidad</a> | <a href="terminos.html">Términos de Uso</a></p>
+    </footer>
+    <script>
+        // JavaScript para manejar los comentarios
+        const formulario = document.getElementById("comentarios-form");
+        const comentariosLista = document.getElementById("comentarios");
+        const nuevoComentario = document.getElementById("nuevo-comentario");
+
+        formulario.addEventListener("submit", function(event) {
+            event.preventDefault();  // Evita que el formulario se envíe y recargue la página
+
+            const comentario = nuevoComentario.value.trim();  // Obtener el comentario y eliminar espacios en blanco innecesarios
+            if (comentario) {
+                // Crear un nuevo elemento de lista para el comentario
+                const nuevoComentarioElemento = document.createElement("li");
+                nuevoComentarioElemento.textContent = comentario;
+
+                // Agregar el comentario a la lista de comentarios
+                comentariosLista.appendChild(nuevoComentarioElemento);
+
+                // Limpiar el campo de texto para nuevos comentarios
+                nuevoComentario.value = "";
+            }
+        });
+    </script>
+</body>
+</html>
